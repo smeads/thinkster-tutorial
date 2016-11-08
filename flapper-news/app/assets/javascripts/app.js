@@ -1,6 +1,5 @@
 angular
    .module('flapperNews', ['ui.router', 'templates', 'Devise'])
-
    .config([
    '$stateProvider',
    '$urlRouterProvider',
@@ -27,7 +26,7 @@ angular
            return posts.get($stateParams.id);
          }]
        }
-      });
+      })
 
       .state('login', {
         url: '/login',

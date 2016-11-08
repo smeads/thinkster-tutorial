@@ -2,8 +2,8 @@ angular
 .module('flapperNews')
 .controller('PostsCtrl', [
 '$scope',
-'$stateParams',
 'posts',
+'post',
 function($scope, posts, post){
   $scope.post = post;
 
@@ -17,7 +17,7 @@ function($scope, posts, post){
         });
         $scope.body = '';
     };
-    $scope.incremmentUpvotes = function(comment){
-    posts.upvotesComment(post, comment);
-  };
+    $scope.incrementUpvotes = function(comment){
+      posts.upvoteComment(post, comment);
+    };
 }]);
